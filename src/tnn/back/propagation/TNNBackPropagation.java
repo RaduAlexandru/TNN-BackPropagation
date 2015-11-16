@@ -25,7 +25,7 @@ public class TNNBackPropagation {
         System.out.println("Hello world");
 
         int N = 4;
-        int H = 100;
+        int H = 12;
         int M = 2;
         int seed = 100;
         double learning_rate_m=0.05;
@@ -144,10 +144,13 @@ public class TNNBackPropagation {
         
        
         
-        for (int iters=0;iters<100000;iters++){
+        for (int iters=0;iters<10000;iters++){
        
-            int patternRow=1;
-            //patternRow = generator.nextInt(11);
+            int patternRow=0;
+            patternRow = generator.nextInt(11);
+            
+            System.out.println("picking another pattern");
+            for (int j =0; j< 200;j++){
 
             //Calculate the input, summed weight (which is just the respective number in the input) 
             //pass the summed input to the tranfer function (which is the identity function for the neuron in the  layer)
@@ -246,7 +249,8 @@ public class TNNBackPropagation {
             //Stop with a reasonable criteria
             
             
-           
+            
+        }   
         
         }
         
